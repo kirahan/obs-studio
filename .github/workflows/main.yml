@@ -144,7 +144,6 @@ jobs:
     name: '03 - Windows Installer'
     runs-on: [windows-latest]
     needs: [windows_build]
-    if: ${{ startsWith(github.ref, 'refs/tags/') && github.event_name != 'pull_request' }}
     env:
       BUILD_FOR_DISTRIBUTION: 'ON'
     steps:
